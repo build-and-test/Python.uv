@@ -7,11 +7,6 @@ updates:
     interval: "daily"
   commit-message:
     prefix: "! r "
-  groups:
-    approvals:
-        patterns:
-          - approvaltests
-          - approval-utilities
 - package-ecosystem: github-actions
   directory: "/"
   schedule:
