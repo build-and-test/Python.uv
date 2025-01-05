@@ -13,3 +13,5 @@ Uses UV to create and manage isolated Python virtual environments.
 
 # Limitations
 
+- build-and-test scripts are not trivial
+- No natural place to make additional tasks, like update_dependencies
