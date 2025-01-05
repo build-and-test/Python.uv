@@ -3,7 +3,6 @@ set -eu
 
 SCRIPT_DIR=$(dirname "$0")
 
-export UV_VERSION=0.5.14
 export UV_SYSTEM_PYTHON=0
 export UV_FROZEN=1
 export UV_INSTALL_DIR="${SCRIPT_DIR}/.uv/bin"
@@ -11,7 +10,7 @@ export UV_PYTHON_INSTALL_DIR="${SCRIPT_DIR}/.uv/python_install"
 export UV_NO_MODIFY_PATH=1
 export UV_PYTHON_PREFERENCE='only-managed'
 
-curl -LsSf https://astral.sh/uv/install.sh | sh -s -- --quiet
+curl -LsSf https://astral.sh/uv/0.5.13/install.sh | sh -s -- --quiet
 
 "${UV_INSTALL_DIR}/uv" venv
 "${UV_INSTALL_DIR}/uv" pip install --requirement requirements.dev.txt --quiet
