@@ -4,11 +4,14 @@ Edit `.python_version`.
 
 # Python modules
 
-Automatically updated by dependabot. Or manually:
+Automatically updated by dependabot. Or manually, run `build-and-test` once to bootstrap UV and then:
 
-1. Remove extra Python dependencies with `pip uninstall -y $(pip freeze)`
-1. Install required dependencies by running either `pip install tox` or `build-and-test`
-1. `tox -e py-update-requirements`
+```bash
+.uv/bin/uv pip install --requirement requirements.dev.in pip-tools  # warning: unpinned dependency
+# Consider --allow-unsafe and --generate-hashes
+.uv/bin/uv pip compile --upgrade --universal --strip-extras --quiet --output-file=requirements.txt requirements.in
+.uv/bin/uv pip compile --upgrade --universal --strip-extras --quiet --output-file=requirements.dev.txt requirements.dev.in
+```
 
 # UV
 
