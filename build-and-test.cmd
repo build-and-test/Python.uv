@@ -6,7 +6,7 @@ set "UV_FROZEN=1"
 set "UV_INSTALL_DIR=%~dp0.uv\bin"
 set "UV_PYTHON_INSTALL_DIR=%~dp0.uv\python_install"
 set "UV_NO_MODIFY_PATH=1"
-set "UV_PYTHON_PREFERENCE='only-managed'"
+set "UV_PYTHON_PREFERENCE=only-managed"
 
 @REM If the this script is run by PWSH it will try to load incompatible modules
 set "PSModulePath="
