@@ -20,6 +20,8 @@ jobs:
       - name: Build and test
         run: |
           ./build-and-test
+      # ensure semaphore file was created
+      - run: type semaphore || exit 1
   shellcheck:
     name: Shellcheck
     runs-on: ubuntu-latest
