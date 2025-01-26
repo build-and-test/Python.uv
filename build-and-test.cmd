@@ -13,8 +13,6 @@ set "PSModulePath="
 
 powershell -ExecutionPolicy ByPass -Command "irm https://astral.sh/uv/0.5.13/install.ps1 | iex" || goto :ERROR
 
-call %UV_INSTALL_DIR%\uv venv || goto :ERROR
-call %UV_INSTALL_DIR%\uv pip install --requirement requirements.dev.txt --quiet || goto :ERROR
 call %UV_INSTALL_DIR%\uv run python -m unittest discover -v || goto :ERROR
 
 

@@ -12,6 +12,4 @@ export UV_PYTHON_PREFERENCE='only-managed'
 
 curl -LsSf https://astral.sh/uv/0.5.13/install.sh | sh -s -- --quiet
 
-"${UV_INSTALL_DIR}/uv" venv
-"${UV_INSTALL_DIR}/uv" pip install --requirement requirements.dev.txt --quiet
 "${UV_INSTALL_DIR}/uv" run python -m unittest discover -v
