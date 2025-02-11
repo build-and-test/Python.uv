@@ -10,4 +10,4 @@ class Tests(unittest.TestCase):
     def test_uv_version(self):
         # Ensure that the UV version is pinned, not latest
         result = subprocess.run([".uv/bin/uv", "--version"], stdout=subprocess.PIPE, text=True, check=True)
-        self.assertTrue(result.stdout.startswith("uv 0.5.13"))
+        self.assertTrue(result.stdout.startswith("uv 0.5.29"))
