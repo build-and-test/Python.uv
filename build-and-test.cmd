@@ -11,7 +11,7 @@ set "UV_PYTHON_PREFERENCE=only-managed"
 @REM If this script is run by PWSH it will try to load incompatible modules, as happens in GitHub Actions.
 set "PSModulePath="
 
-powershell -ExecutionPolicy ByPass -Command "irm https://astral.sh/uv/0.5.13/install.ps1 | iex" || goto :ERROR
+powershell -ExecutionPolicy ByPass -Command "irm https://astral.sh/uv/0.5.29/install.ps1 | iex" || goto :ERROR
 
 call %UV_INSTALL_DIR%\uv run python -m unittest discover -v || goto :ERROR
 
